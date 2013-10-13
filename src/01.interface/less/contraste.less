@@ -1,3 +1,4 @@
+@import "_mixins.less";
 //Estrutura basica
 .contraste {
   background-color: #0d0d0d !important;
@@ -110,4 +111,16 @@
     }
     .footer-ferramenta { background:#000 }
   }
+}
+@media (max-width: 979px) { 
+    .contraste {
+        main div.container {
+            .navigation-container { background:fade(#333, 70%);
+                .mainmenu-toggle { border:1px solid yellow; background:#000; color:yellow;
+                    .icon-list { .m_hide(); }
+                }
+                aside { background:#000; border-color:#000 }
+            }
+        }
+    }
 }

@@ -16,14 +16,12 @@
 	
 	<link href="img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/template.css" />
-	<link rel="stylesheet" href="css/template-verde.css" />
-	
+	<link rel="stylesheet" href="css/template-verde.css" />	
+	<link rel="stylesheet" href="css/contraste.css" />	
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,300,800" type="text/css" />
-	
-
 </head>
 <body>
+	<a class="hide" id="topo" href="#accessibility">Ir direto para menu de acessibilidade.</a>
 	<noscript>
 		Para o completo funcionalidade deste site é necessário habilitar o <strong>JavaScript</strong>. Aqui estão as <a href="http://www.enable-javascript.com/pt/" target="_blank">instruções de como habilitar o JavaScript</a> no seu navegador.
 	</noscript>
@@ -37,7 +35,7 @@
     	<header>
     		<div class="container"> 
 	    		<div class="row">    			   			
-					<div class="span12">
+					<div class="span12 accessibility-container">
 						<ul id="accessibility">
 							<li>
 								<a accesskey="1" href="#content" id="link-conteudo">
@@ -66,7 +64,8 @@
 						</ul>						
 					</div>
 					<!-- fim div.span12 -->
-					<div class="span12">
+					<div class="span12 language-and-actions-container">
+						<!-- Descomente para inserir menu de exemplo de idiomas no topo -->
 						<!-- <ul id="language" class="pull-right">
 							<li class="language-en">
 								<a href="#">EN</a>
@@ -77,13 +76,13 @@
 						</ul> -->					
 						<ul id="portal-siteactions" class="pull-right">
 							<li>
-								<a href="#">Acessibilidade</a>
+								<a accesskey="5" href="#">Acessibilidade</a>
 							</li>
 							<li>
-								<a href="#">Alto Contraste</a>
+								<a accesskey="6" href="#" class="toggle-contraste">Alto Contraste</a>
 							</li>
 							<li>
-								<a href="#">Mapa do Site</a>
+								<a accesskey="7" href="#">Mapa do Site</a>
 							</li>
 						</ul>
 					</div>
@@ -92,7 +91,7 @@
 				<!-- fim div.row -->
 				<div class="row">
 					<div id="logo" class="span16">
-						<a href="#" title="Descrição do Portal Padrão">
+						<a href="index.html" title="Descrição do Portal Padrão">
 							<span class="portal-title-1">Denominação do órgão</span>
 							<h1 class="portal-title corto">Nome principal</h1>
 							<span class="portal-description">Subordinação</span>
@@ -106,9 +105,8 @@
 									<h2 class="hidden">Buscar no portal</h2>
 									<div class="input-append">
 										<input type="text" class="searchField span5" placeholder="Buscar no portal" title="Buscar no site" size="18" name="searchterm">
-										<button type="button" class="btn searchButton"><span class="hide">Buscar</span><i class="icon-search"></i></button>	
-									</div>
-									
+										<button type="button" class="btn searchButton"><span class="hide">Buscar</span><i class="icon-search">&nbsp;</i></button>	
+									</div>									
 								</fieldset>
 							</form>
 						</div>
@@ -140,24 +138,25 @@
 			<div class="sobre">
 				<div class="container">
 					<div class="pull-right">
-						<h2 class="hidden">Serviços</h2>
+						<h2 class="hide">Serviços</h2>
 						<ul>
 							<li class="portalservicos-item">
-								<a title="Perguntas frequentes" href="http://tv1-lnx-04.grupotv1.com/portalmodelo/servicos/perguntas-frequentes">Perguntas frequentes</a>
+								<a title="Perguntas frequentes" href="#">Perguntas frequentes</a>
 							</li>
 							<li class="portalservicos-item">
-								<a title="Contato" href="http://tv1-lnx-04.grupotv1.com/portalmodelo/servicos/contato">Contato</a>
+								<a title="Contato" href="#">Contato</a>
 							</li>
 							<li class="portalservicos-item">
-								<a title="Serviços da [Denominação]" href="http://tv1-lnx-04.grupotv1.com/portalmodelo/servicos/acesso-a-sistemas">Serviços da [Denominação]</a>
+								<a title="Serviços da [Denominação]" href="#">Serviços da [Denominação]</a>
 							</li>
 							<li class="portalservicos-item">
-								<a title="Dados abertos" href="http://tv1-lnx-04.grupotv1.com/portalmodelo/servicos/dados-abertos">Dados abertos</a>
+								<a title="Dados abertos" href="#">Dados abertos</a>
 							</li>
 							<li class="portalservicos-item">
-								<a title="Área de imprensa" href="http://tv1-lnx-04.grupotv1.com/portalmodelo/servicos/area-de-imprensa">Área de imprensa</a>
+								<a title="Área de imprensa" href="#">Área de imprensa</a>
 							</li>
 						</ul>
+						<span class="hide">Fim do menu de serviços</span>
 					</div>
 					<!-- fim div#sobre.pull-right -->
 				</div>
@@ -182,8 +181,10 @@
 				</div>
 				<!-- fim div.row -->
 				<div class="row">
-					<div class="span6">
-						<aside class="row">
+					<div class="span6 navigation-container">
+						<a href="#" class="visible-phone visible-tablet mainmenu-toggle btn"><i class="icon-list">&nbsp;</i>&nbsp;Menu</a>
+						<aside class="row" id="navigation">							
+							<span class="hide">Início do menu principal</span>
 							<nav id="menu-de-apoio" class="span4">
 								<h2 class="hide">Temas relevantes</h2>
 								<ul>
@@ -191,7 +192,7 @@
 								</ul>							
 							</nav>
 							<nav class="span4 assuntos">
-								<h2>Assuntos</h2>
+								<h2>Assuntos <i class="icon-chevron-down visible-phone visible-tablet pull-right">&nbsp;</i></h2>
 								<ul>
 									<li><a href="#" title="Editoria A">Editoria A</a></li>
 									<li><a href="#" title="Editoria B">Editoria B</a></li>
@@ -199,7 +200,7 @@
 								</ul>
 							</nav>
 							<nav class="span4 sobre">
-								<h2>Sobre</h2>
+								<h2>Sobre <i class="icon-chevron-down visible-phone visible-tablet pull-right">&nbsp;</i></h2>
 								<ul>
 									<li><a href="#" title="Institucional">Institucional</a></li>
 									<li><a href="#" title="Ações e Programas">Ações e Programas</a></li>
@@ -212,10 +213,16 @@
 									<li><a href="#" title="Serviço de Informação ao Cidadão - SIC">Serviço de Informação ao Cidadão - SIC</a></li>
 								</ul>
 							</nav>	
+							<span class="hide">Início do menu principal</span>
 						</aside>					
 					</div>
-					<div class="span18">
-						Conteúdo...
+					<div id="content" class="span18">
+						<div class="tablet-phones-padding">
+							<span id="content" class="hide">Início do conteúdo da página</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, incidunt sequi sed nisi excepturi inventore illum nam odit blanditiis harum! Eum, similique optio odio quos perspiciatis quo ratione veniam perferendis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, minima iste in labore dolorum illo cumque repudiandae ut rerum corporis vero maiores molestiae! Repellendus, enim in temporibus cumque aperiam numquam.</p>
+							<span class="hide">Fim do conteúdo da página</span>
+						</div>
 					</div>
 				</div>
 				<!-- fim div.row -->    			
@@ -223,8 +230,14 @@
     		<!-- fim div.container -->
     	</main>
     	<footer>
-    		<div class="container">
-    			<div class="row footer-menus">
+    		<div class="footer-atalhos">
+    			<div class="container">
+    				<div class="pull-right voltar-ao-topo"><a href="#portal-siteactions"><i class="icon-chevron-up">&nbsp;</i>&nbsp;Voltar para o topo</a></div>
+    			</div>
+    		</div>
+    		<div class="container container-menus">
+    			<div id="footer" class="row footer-menus">
+    				<span class="hide">Início da navegação de rodapé</span>
     				<div class="span6">
 						<nav class="row assuntos">
 							<h2>Assuntos</h2>
@@ -293,7 +306,8 @@
 								<li><a href="#">English version - Versão em Inglês</a></li>
 							</ul>
 						</nav>
-					</div>					
+					</div>
+					<span class="hide">Fim da navegação de rodapé</span>					
     			</div>
     			<!-- fim .row -->
     		</div>
@@ -301,14 +315,19 @@
 			<div class="footer-logos">
 				<div class="container">
 					<a href="http://www.acessoainformacao.gov.br/" class="logo-acesso pull-left"><img src="images/acesso-a-informacao.png" alt="Acesso a Informação"></a>
-					<a href="http://www.brasil.gov.br/" class="brasil pull-right"><img src="images/brasil.png" alt="Brasil - Governo Federal"></a>	
+					<a href="http://www.brasil.gov.br/" class="brasil pull-right"><img src="images/brasil.png" alt="Brasil - Governo Federal"></a>
 				</div>				
 			</div>
 			<div class="footer-ferramenta">
 				<div class="container">
 					<p>Interface preparada para desenvolvimento com o CMS <a href="http://www.joomla.org">Joomla</a></p>		
 				</div>				
-			</div>    		
+			</div>
+    		<div class="footer-atalhos visible-phone">
+    			<div class="container">
+    				<div class="pull-right voltar-ao-topo"><a href="#portal-siteactions"><i class="icon-chevron-up">&nbsp;</i>&nbsp;Voltar para o topo</a></div>
+    			</div>
+    		</div>
     	</footer>
     </div>
 	<!-- fim div#wrapper -->
@@ -317,5 +336,7 @@
 	<script src="js/jquery.min.js" type="text/javascript"></script>
 	<script src="js/jquery-noconflict.js" type="text/javascript"></script>
 	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript"></script>
+	<script src="js/template.js" type="text/javascript"></script>
 </body>
 </html>

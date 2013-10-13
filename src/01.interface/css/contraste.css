@@ -1,4 +1,5 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
+.debug{border:1px solid red;}
 .contraste{background-color:#0d0d0d !important;color:#ffffff;}.contraste a{color:yellow;}
 .contraste a:hover,.contraste a:focus{color:yellow;}
 .contraste h1 small,.contraste h2 small,.contraste h3 small,.contraste h4 small,.contraste h5 small,.contraste h6 small{color:#cccccc;}
@@ -28,3 +29,4 @@
 .contraste footer{background-image:none;background-color:#000000;}.contraste footer h2,.contraste footer h3,.contraste footer h4{color:#ffffff;}
 .contraste footer .footer-atalhos,.contraste footer .footer-logos{background:rgba(51, 51, 51, 0.7);}.contraste footer .footer-atalhos a,.contraste footer .footer-logos a{color:#ffff00;}
 .contraste footer .footer-ferramenta{background:#000000;}
+@media (max-width:979px){.contraste main div.container .navigation-container{background:rgba(51, 51, 51, 0.7);}.contraste main div.container .navigation-container .mainmenu-toggle{border:1px solid yellow;background:#000;color:yellow;}.contraste main div.container .navigation-container .mainmenu-toggle .icon-list{display:none;} .contraste main div.container .navigation-container aside{background:#000;border-color:#000000;}}

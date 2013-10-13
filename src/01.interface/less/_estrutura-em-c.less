@@ -2,7 +2,6 @@ header {
     .header-main-gradient(@cor-principal, @cor-gradiente-topo01, @cor-gradiente-topo100);
      @line-height:5px;
     padding: 14px 0 0 0;
-    div.sobre { background-color: darken(@cor-principal, 4%); }
     #accessibility{       
         font-family: Arial,Helvetica,sans-serif; margin:0; line-height:@line-height;
         li { line-height:@line-height; margin:0 10px 0 0 }
@@ -52,6 +51,7 @@ header {
         li { margin: 0 0 0 2px }
     }
     div.sobre {
+        background-color: darken(@cor-principal, 4%);
         ul { margin:8px 0; line-height:1em }
         li { border-right:1px solid fade(@cor-contraste01, 28%); padding:0 8px; line-height:1em;
             &:last-child { border:none; padding-right:0 }
@@ -117,7 +117,7 @@ footer {
         }        
     }
     .footer-menus { padding-bottom:10px }
-    .footer-logos { padding:25px 0; background:darken(@cor-rodape, 1%); }
+    .footer-logos { padding:25px 0; background:darken(@cor-rodape, 5%); }
     .footer-ferramenta { background:@cor-contraste01; padding:17px 0 11px 0;
         p { font-size:0.91em; line-height:1em }
     }
