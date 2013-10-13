@@ -1,0 +1,77 @@
+.basic_responsive() {
+    header {
+        .accessibility-container { .m_hide() }
+        .language-and-actions-container { .expand_hspace();
+            #portal-siteactions { .expand_hspace(); text-align:center;
+                a { font-size:0.81em }
+            }
+        }
+        #logo {
+            h1 { line-height:1.1em }
+        }
+    }
+    main div.container { 
+        #em-destaque { position:absolute; left:auto; top:auto }
+        .navigation-container { display:block; margin-top:-42px; .expand_hspace(); background:@cor-principal; .rounded-corners();
+            .mainmenu-toggle { width:20%; margin:5px; .fright(); text-transform:uppercase; font-weight:bold; font-size:1.2em; color:@cor-principal }
+            aside { .m_hide(); clear:both; .expand_hspace(); background:@cor-contraste01; border-left:2px solid @cor-principal; border-bottom:2px solid @cor-principal; border-right:2px solid @cor-principal; .rounded-corners(0 5px 5px 5px);
+                nav { clear:both; .expand_hspace(); margin-bottom:0; .rounded-corners();
+                    ul { .m_hide();
+                        a { display:block; width:100%; padding-top:7px; padding-bottom:7px }
+                    }
+                    h2 {
+                        font-size:1.3em; padding-top:16px;
+                        i { margin-right:10px }
+                    }
+                }
+                #menu-de-apoio {
+                    ul { display:block !important;
+                        li { margin-left:10px }
+                    }
+                }
+            }
+        }
+    }
+    #content { padding-top:58px; .expand_hspace();
+        .tablet-phones-padding { padding:0 10px }
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) { 
+    .basic_responsive();
+}
+@media (max-width: 767px) {
+    .basic_responsive();
+}
+@media (max-width: 480px) { 
+    .basic_responsive();
+    body { padding-left:0; padding-right:0 }
+    header { padding-left:5px; padding-right:5px;
+        #logo {
+            padding-left:10px; padding-right:10px;
+            span { display:block; .expand_hspace(); padding-top:4px; padding-bottom:4px }
+        }
+        #portal-searchbox {            
+            form { margin-top:12px; .expand_hspace(); text-align:center; }
+            .input-append {
+                .searchField { width:240px; font-size:18px; height:40px !important }
+                .searchButton { height:40px !important }
+            }
+        }
+        #social-icons { .m_hide(); }
+        div.sobre { background:transparent !important;  text-align:center;
+            .pull-right { float:none !important }
+            * { margin:0; padding:0; display:inline; border:none }
+            .hide { display:none }
+            a { font-size:0.9em }
+        }
+    }
+    #em-destaque { display:none !important }
+    .navigation-container { 
+        .mainmenu-toggle { width:40% !important }
+    }
+    footer {
+        .footer-atalhos a { margin-right:12px }
+        .footer-logos { padding-left:10px; padding-right:10px; }
+        .footer-ferramenta { text-align:center }
+    }
+}
