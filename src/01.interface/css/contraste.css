@@ -1,0 +1,30 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+.contraste{background-color:#0d0d0d !important;color:#ffffff;}.contraste a{color:yellow;}
+.contraste a:hover,.contraste a:focus{color:yellow;}
+.contraste h1 small,.contraste h2 small,.contraste h3 small,.contraste h4 small,.contraste h5 small,.contraste h6 small{color:#cccccc;}
+.contraste figure figcaption{background-color:#1a1a1a;}
+.contraste ::selection{color:#111111;background-color:#ffffff;}
+.contraste ::-moz-selection{color:#111111;background-color:#ffffff;}
+.contraste .form-control:-moz-placeholder{color:#ffffff;}
+.contraste .form-control::-moz-placeholder{color:#ffffff;}
+.contraste .form-control:-ms-input-placeholder{color:#ffffff;}
+.contraste .form-control::-webkit-input-placeholder{color:#ffffff;}
+.contraste .form-control:focus{border-color:#ffffff;outline:0;-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(255, 255, 255, 0.6);-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(255, 255, 255, 0.6);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(255, 255, 255, 0.6);}
+.contraste .btn-default{background-color:#262626;color:#ffffff;border-color:#1a1a1a;}
+.contraste .btn-default:hover,.contraste .btn-default:focus{background-color:#1a1a1a;}
+.contraste input{background-color:#262626;color:#ffffff;}
+.contraste header{background-image:none;background-color:#000000;border-top-color:#0d0d0d;}.contraste header .active a{color:#ccffcc;}
+.contraste header #accessibility a{color:yellow;}.contraste header #accessibility a:hover{background:#FFF;color:#000000;}
+.contraste header #accessibility a span{background:#FFF;color:#000000;}
+.contraste header #logo a{color:yellow;}
+.contraste header .sobre{background:rgba(51, 51, 51, 0.7);}.contraste header .sobre a{color:#ffff00;}
+.contraste header #portal-searchbox input[placeholder],.contraste header #portal-searchbox [placeholder],.contraste header #portal-searchbox *[placeholder]{color:yellow !important;}
+.contraste header #portal-searchbox input{color:#FFF;}.contraste header #portal-searchbox input:focus{background-color:#000000;}
+.contraste main div.container #em-destaque h2{background:#000;border-bottom:dotted #ffffff 1px;}
+.contraste main div.container #em-destaque ul{background:rgba(51, 51, 51, 0.7);border-bottom:dotted #ffffff 1px;}
+.contraste main div.container #em-destaque li a{color:#ffff00;}
+.contraste main div.container #menu-de-apoio a,.contraste main div.container nav a{color:#ffff00;}
+.contraste main div.container nav h2{background:rgba(51, 51, 51, 0.7);border-color:#FFF;color:#ffffff;}
+.contraste footer{background-image:none;background-color:#000000;}.contraste footer h2,.contraste footer h3,.contraste footer h4{color:#ffffff;}
+.contraste footer .footer-atalhos,.contraste footer .footer-logos{background:rgba(51, 51, 51, 0.7);}.contraste footer .footer-atalhos a,.contraste footer .footer-logos a{color:#ffff00;}
+.contraste footer .footer-ferramenta{background:#000000;}

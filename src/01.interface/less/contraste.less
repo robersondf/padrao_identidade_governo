@@ -1,0 +1,113 @@
+//Estrutura basica
+.contraste {
+  background-color: #0d0d0d !important;
+  color: #ffffff;
+  a {
+    color: yellow;
+  }
+  a:focus {
+    //outline: 2px solid #ffffff;
+  }
+  a:hover,
+  a:focus {
+    color: yellow;
+  }
+  h1 small,
+  h2 small,
+  h3 small,
+  h4 small,
+  h5 small,
+  h6 small {
+    color: #cccccc;
+  }
+  figure figcaption {
+    background-color: #1a1a1a;
+  }
+  ::selection {
+    color: #111111;
+    background-color: #ffffff;
+  }
+  ::-moz-selection {
+    color: #111111;
+    background-color: #ffffff;
+  }
+  .form-control:-moz-placeholder {
+    color: #ffffff;
+  }
+  .form-control::-moz-placeholder {
+    color: #ffffff;
+  }
+  .form-control:-ms-input-placeholder {
+    color: #ffffff;
+  }
+  .form-control::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+  .form-control:focus {
+    border-color: #ffffff;
+    outline: 0;
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 255, 255, 0.6);
+  }
+  .btn-default {
+    background-color: #262626;
+    color: #ffffff;
+    border-color: #1a1a1a;
+  }
+  .btn-default:hover,
+  .btn-default:focus {
+    background-color: #1a1a1a;
+  }
+  input {
+    background-color: #262626;
+    color: #ffffff;
+  }
+
+  header {
+    background-image: none;
+    background-color: #000000;
+    border-top-color: #0d0d0d;  
+    .active a { color: #ccffcc; }
+    #accessibility {
+        a { color:yellow;
+          &:hover { background:#FFF; color:#000 }
+        }
+        a span { background:#FFF; color:#000 }
+    }
+    #logo a {
+        color:yellow;
+    }
+    .sobre { background:fade(#333333, 70%);
+      a { color:yellow }
+    }
+     #portal-searchbox {
+         input[placeholder], [placeholder], *[placeholder] {
+              color:yellow !important;
+          }
+          input {
+            color:#FFF;
+            &:focus { background-color: #000 }
+          }
+      }
+  }
+  main div.container {  
+    #em-destaque {
+        h2 { background:#000; border-bottom:dotted #FFF 1px }
+        ul { background:fade(#333333, 70%); border-bottom:dotted #FFF 1px }
+        li a { color:yellow }
+    }
+    #menu-de-apoio a, nav a { color:yellow }
+    nav h2 { background:fade(#333, 70%); border-color:#FFF; color:#FFF }
+  }
+  footer {
+    background-image: none;
+    background-color: #000000;
+    
+    h2, h3, h4 { color:#FFF }
+    .footer-atalhos, .footer-logos { background:fade(#333, 70%);
+      a { color:yellow }
+    }
+    .footer-ferramenta { background:#000 }
+  }
+}
