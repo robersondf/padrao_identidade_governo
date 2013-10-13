@@ -1,0 +1,154 @@
+// cores
+@cor-principal:#0A5517;
+@cor-contraste01:#FFF;
+@cor-tom-principal:#0F0;
+@cor-cinza-escuro:#717782;
+@cor-cinza-medio:#e8e7e7;
+@cor-cinza-claro:#eeeff2;
+@cor-preto:#333;
+@cor-azul:#1c78e4;
+@cor-rodape:#034811;
+
+// mixins
+.header-main-gradient( @main: #FFF, @um-porcento: #FFF, @cem-porcento: #FFF ) {
+ /* Old browsers */
+    background-color: @cor-principal;
+	background-image: -moz-radial-gradient(center, ellipse cover,  @um-porcento 1%, @cem-porcento 100%);
+ /* FF3.6+ */
+	background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,@um-porcento), color-stop(100%,@cem-porcento));
+ /* Chrome,Safari4+ */
+	background-image: -webkit-radial-gradient(center, ellipse cover,  @um-porcento 1%,@cem-porcento 100%);
+ /* Chrome10+,Safari5.1+ */
+	background-image: -o-radial-gradient(center, ellipse cover,  @um-porcento 1%,@cem-porcento 100%);
+ /* Opera 12+ */
+	background-image: -ms-radial-gradient(center, ellipse cover,  @um-porcento 1%,@cem-porcento 100%);
+ /* IE10+ */
+	background-image: radial-gradient(ellipse at center,  @um-porcento 1%,@cem-porcento 100%);
+ /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' @um-porcento', endColorstr='@cem-porcento',GradientType=1 );
+ /* IE6-9 fallback on horizontal gradient */
+	color: #fff;
+}
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.debug() { border:1px solid red; }
+.debug { .debug() }
+
+a {
+    &:focus { border:1px solid yellow }
+}
+
+header {
+    .header-main-gradient(@cor-principal, #19882c, #025310);
+     @line-height:5px;
+    padding: 14px 0 0 0;
+    div.sobre { background-color: darken(@cor-principal, 4%); }
+    #accessibility{       
+    	font-family: Arial,Helvetica,sans-serif; margin:0; line-height:@line-height;
+        li { line-height:@line-height; margin:0 10px 0 0 }
+        a { 
+            color:@cor-contraste01; font-size: 0.7em;
+            span { background-color: fade(lighten(@cor-principal, 80%), 50%); color:@cor-principal; padding:0 2px 1px 3px }
+        }
+    }
+    #portal-siteactions, #language { 
+        border-bottom: 1px dotted fade(@cor-contraste01, 60%); text-transform:uppercase; margin:-6px 0 0 0;
+        li { 
+            margin:0 12px 0 0;
+            &:last-child { margin-right:0 !important }
+        }
+        a { color:@cor-contraste01; font-size:0.73em }
+    }
+    #language {
+        margin-left:20px;
+        li { margin-left:6px; display:block; float:left;
+            &:first-child { margin-left:0 }
+        }
+        li a { padding:0 0 0 16px }
+        li.language-en a { background:transparent url('../img/flag-en.gif') no-repeat 0 center;  }
+        li.language-es a { background:transparent url('../img/flag-es.gif') no-repeat 0 center; }
+//        a { color:@cor-contraste01; font-size:0.73em }
+    }
+    #logo { 
+        margin-top:10px;
+        span { line-height:0.9em }
+        a { color:@cor-contraste01 }
+        .portal-title-1 { font-size:0.85em }
+        h1 {
+            font-family: 'Open Sans Bold',Arial,Helvetica,sans-serif; font-size:3em; line-height:0.8em; font-weight:bold; margin-bottom:5px;
+        }
+        .portal-description { font-size:0.95em; text-transform:uppercase }
+    }
+    #portal-searchbox {
+        form { margin:32px 0 0 0 }
+        input {
+          font-size:12px;
+          &:focus { background-color: lighten(yellow, 45%) }
+        }
+    }
+    #social-icons { margin:5px 0 5px 0;
+        li { margin: 0 0 0 2px }
+    }
+    div.sobre {
+        ul { margin:8px 0; line-height:1em }
+        li { border-right:1px solid fade(@cor-contraste01, 28%); padding:0 8px; line-height:1em;
+            &:last-child { border:none; padding-right:0 }
+        }
+        a { color:@cor-contraste01; font-size:0.82em }
+    }
+}
+main div.container {
+    padding:48px 0 65px 0;
+    div.row-flutuante { margin-top:-28px }
+    #em-destaque {
+        display:block; min-height:20px; padding:0 0 24px 0;
+        @altura-padding:7px;        
+        h2, ul, li, a { padding:0; text-align:center; text-transform:uppercase }
+        h2 { background:@cor-cinza-escuro url('../img/em-destaque.png') no-repeat right center; color:@cor-contraste01; padding:@altura-padding 0 @altura-padding 0; .rounded-corners(5px 0 0 5px); margin-right:0; font-size:0.7em; font-weight:normal;line-height:1em;  }
+        ul { margin:0; padding:0 5px; background:@cor-cinza-medio; .rounded-corners(0 5px 5px 0) }
+        li {  
+            display:block; float:left; background:transparent url('../img/linha-cinza.gif') repeat-y right 0;
+            &:last-child { background:none }
+            a { font-size:0.7em; color:@cor-preto; display:block; padding:@altura-padding 5px; line-height:1em;  }
+        }
+        li.n1 { width:100% !important;  }
+        li.n2 { width:50% !important; }
+        li.n3 { width:33.3% !important; }
+        li.n4 { width:25% !important; }
+        li.n5 { width:20% !important; }
+    }
+    nav a { font-size:1em; line-height:0.9em; color:@cor-preto;
+        &:hover { text-decoration:underline }
+    }
+    nav { display:block; margin-bottom:35px; }
+    nav h2 { border-top:3px solid @cor-principal; padding:12px 5px 5px 10px; height:32px; background:@cor-cinza-claro; text-transform:uppercase; font-size:0.8em; line-height:1em; color: @cor-principal }
+    nav ul { display:block; margin:0; border-top:1px solid @cor-cinza-medio }
+    nav li { display:block; padding:5px 10px 5px 20px; border-bottom:1px solid @cor-cinza-medio }
+    #menu-de-apoio {   
+        li { padding-left:0; padding-right:0; }
+        a { color:@cor-azul; font-size:1.1em } 
+    }    
+}
+footer {
+    background:@cor-rodape; padding:48px 0 0 0;
+    .row { margin-bottom:13px }
+    nav {
+        border-left:1px dotted fade(lighten(@cor-principal, 40%), 70%); padding:0 5px 0 10px;
+        h2 { font-size:1.3em; font-weight:bold; color:fade(lighten(@cor-principal, 60%), 85%); line-height:1.3em; padding:5px 0 5px 0 }
+        ul { margin-left:0 }
+        li { display:block; padding-bottom:3px }
+        a { font-size:0.9em; color:@cor-contraste01; line-height:0.9em;
+            &:hover { color:@cor-contraste01; text-decoration:underline }
+        }        
+    }
+    .footer-menus { padding-bottom:10px }
+    .footer-logos { padding:25px 0; background:darken(@cor-rodape, 1%); }
+    .footer-ferramenta { background:@cor-contraste01; padding:17px 0 11px 0;
+        p { font-size:0.91em; line-height:1em }
+    }
+}
