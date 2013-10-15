@@ -66,8 +66,7 @@
   }
 
   header {
-    background-image: none;
-    background-color: #000000;
+    .header-main-gradient( #000, #000, #000 );
     border-top-color: #0d0d0d;  
     .active a { color: #ccffcc; }
     #accessibility {
@@ -79,8 +78,12 @@
     #logo a {
         color:yellow;
     }
-    .sobre { background:fade(#333333, 70%);
+    .sobre { background:lighten(#000, 11%);
+      li { border-color:lighten(#000, 22%); }
       a { color:yellow }
+    }
+    #portal-siteactions, #language {
+        border-color:#666;
     }
      #portal-searchbox {
          input[placeholder], [placeholder], *[placeholder] {
@@ -95,18 +98,18 @@
   main div.container {  
     #em-destaque {
         h2 { background:#000; border-bottom:dotted #FFF 1px }
-        ul { background:fade(#333333, 70%); border-bottom:dotted #FFF 1px }
+        ul { background:lighten(#000, 11%); border-bottom:dotted #FFF 1px }
         li a { color:yellow }
     }
     #menu-de-apoio a, nav a { color:yellow }
-    nav h2 { background:fade(#333, 70%); border-color:#FFF; color:#FFF }
+    nav h2 { background:lighten(#000, 11%); border-color:#FFF; color:#FFF }
   }
   footer {
     background-image: none;
     background-color: #000000;
     
     h2, h3, h4 { color:#FFF }
-    .footer-atalhos, .footer-logos { background:fade(#333, 70%);
+    .footer-atalhos, .footer-logos { background:lighten(#000, 11%);
       a { color:yellow }
     }
     .footer-ferramenta { background:#000 }
@@ -115,7 +118,7 @@
 @media (max-width: 979px) { 
     .contraste {
         main div.container {
-            .navigation-container { background:fade(#333, 70%);
+            .navigation-container { background:lighten(#000, 11%);
                 .mainmenu-toggle { border:1px solid yellow; background:#000; color:yellow;
                     .icon-list { .m_hide(); }
                 }

@@ -7,12 +7,12 @@ header {
         li { line-height:@line-height; margin:0 10px 0 0 }
         a { 
             color:@cor-contraste01; font-size: 0.7em;
-            span { background-color: fade(lighten(@cor-principal, 80%), 50%); color:@cor-principal; padding:0 2px 1px 3px }
-            &:hover { background:fade(@cor-contraste01, 30%) }
+            span { background-color: desaturate(lighten(@cor-principal, 60%), 45%); color:@cor-principal; padding:0 2px 0px 3px }
+            &:hover { background:desaturate(lighten(@cor-principal, 30%), 45%) }
         }
     }
     #portal-siteactions, #language { 
-        border-bottom: 1px dotted fade(@cor-contraste01, 60%); text-transform:uppercase; margin:-6px 0 0 0;
+        border-bottom: 1px dotted  desaturate(lighten(@cor-principal, 50%), 40%); text-transform:uppercase; margin:-6px 0 0 0;
         li { 
             margin:0 12px 0 0;
             &:last-child { margin-right:0 !important }
@@ -32,13 +32,13 @@ header {
     }
     #logo { 
         margin-top:10px;
-        span { line-height:0.9em }
+       // span { line-height:0.9em }
         a { color:@cor-contraste01 }
         .portal-title-1 { font-size:0.85em }
         h1 {
-            font-family: 'Open Sans Bold',Arial,Helvetica,sans-serif; font-size:3em; line-height:0.8em; font-weight:bold; margin-bottom:5px;
+            font-family: 'Open Sans',Arial,Helvetica,sans-serif; font-size:2.9em; line-height:0.8em; font-weight:800; letter-spacing:-1px; margin-bottom:5px;
         }
-        .portal-description { font-size:0.95em; text-transform:uppercase }
+        .portal-description { font-size:0.95em; text-transform:uppercase; position:relative; top:5px }
     }
     #portal-searchbox {
         form { margin:32px 0 0 0 }
@@ -53,7 +53,7 @@ header {
     div.sobre {
         background-color: darken(@cor-principal, 4%);
         ul { margin:8px 0; line-height:1em }
-        li { border-right:1px solid fade(@cor-contraste01, 28%); padding:0 8px; line-height:1em;
+        li { border-right:1px solid desaturate(lighten(@cor-principal, 5%), 25%); padding:0 8px; line-height:1em;
             &:last-child { border:none; padding-right:0 }
         }
         a { color:@cor-contraste01; font-size:0.82em;
@@ -108,8 +108,8 @@ footer {
     .container-menus { padding:48px 0 0 0; }
     .row { margin-bottom:13px }
     nav {
-        border-left:1px dotted fade(lighten(@cor-principal, 40%), 70%); padding:0 5px 0 10px;
-        h2 { font-size:1.3em; font-weight:bold; color:fade(lighten(@cor-principal, 60%), 85%); line-height:1.3em; padding:5px 0 5px 0 }
+        border-left:1px dotted desaturate(lighten(@cor-principal, 50%), 40%); padding:0 5px 0 10px;
+        h2 { font-size:1.3em; font-weight:bold; color:desaturate(lighten(@cor-principal, 50%), 40%); line-height:1.3em; padding:5px 0 5px 0 }
         ul { margin-left:0 }
         li { display:block; padding-bottom:3px }
         a { font-size:0.9em; color:@cor-contraste01; line-height:0.9em;

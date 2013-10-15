@@ -6,19 +6,21 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Portal Modelo - interface 1.0</title>
-
-	<base href="http://localhost/padrao_identidade_governo/src/01.interface/" />
+	<!-- <base href="" /> -->
 	<meta name="keywords" content="" />
 	<meta name="author" content="Joomla Calango - Joomla User Group Oficial" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
 	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<link href="img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/template-verde.css" />	
-	<link rel="stylesheet" href="css/contraste.css" />	
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,300,800" type="text/css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type='text/css'/>
+	<link rel="stylesheet" href="css/template-verde.css" type='text/css'/>	
+	<link rel="stylesheet" href="css/contraste.css" type='text/css'/>		
+	<!--[if lt IE 10]><link rel="stylesheet" href="css/ie.css" /><![endif]-->
+	<!--[if lt IE 9]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	<!--[if lt IE 8]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,800,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<a class="hide" id="topo" href="#accessibility">Ir direto para menu de acessibilidade.</a>
@@ -165,7 +167,7 @@
 			<!-- fim div.row -->
 			
     	</header>
-    	<main> 
+    	<main class="main"> 
     		<div class="container">
 				<div class="row" id="em-destaque">
 					<section>
@@ -229,7 +231,7 @@
     		</div>
     		<!-- fim div.container -->
     	</main>
-    	<footer>
+    	<footer class="footer">
     		<div class="footer-atalhos">
     			<div class="container">
     				<div class="pull-right voltar-ao-topo"><a href="#portal-siteactions"><i class="icon-chevron-up">&nbsp;</i>&nbsp;Voltar para o topo</a></div>
@@ -239,7 +241,7 @@
     			<div id="footer" class="row footer-menus">
     				<span class="hide">Início da navegação de rodapé</span>
     				<div class="span6">
-						<nav class="row assuntos">
+						<nav class="row assuntos nav">
 							<h2>Assuntos</h2>
 							<ul>
 								<li><a href="#" title="Editoria A">Editoria A</a></li>
@@ -249,7 +251,7 @@
 						</nav>    					
     				</div>
 					<div class="span6">
-						<nav class="row servicos">
+						<nav class="row servicos nav">
 							<h2>Serviços</h2>
 							<ul>
 								<li class="portalservicos-item">
@@ -271,7 +273,7 @@
 						</nav>							
 					</div>
 					<div class="span6">
-						<nav class="row redes-sociais">
+						<nav class="row redes-sociais nav">
 							<h2>Redes Sociais</h2>
 							<ul>
 								<li class="portalredes-item" id="portalredes-twitter"><a title="Twitter" href="https://twitter.com/twitter">
@@ -290,14 +292,14 @@
 						</nav>						
 					</div>
 					<div class="span6">
-						<nav class="row rss">
+						<nav class="row rss nav">
 							<h2>RSS</h2>
 							<ul>
 								<li><a href="#" title="O que é?">O que é?</a></li>
 								<li><a href="#" title="Assine">Assine</a></li>
 							</ul>
 						</nav>
-						<nav class="row sobre">
+						<nav class="row sobre nav">
 							<h2>Sobre o site</h2>
 							<ul>
 								<li><a href="#">Acessibilidade</a></li>

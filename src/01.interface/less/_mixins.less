@@ -1,7 +1,7 @@
 // mixins
 .header-main-gradient( @main: #FFF, @um-porcento: #FFF, @cem-porcento: #FFF ) {
  /* Old browsers */
-    background-color: @cor-principal;
+    background-color: @main;
     background-image: -moz-radial-gradient(center, ellipse cover,  @um-porcento 1%, @cem-porcento 100%);
  /* FF3.6+ */
 	background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,@um-porcento), color-stop(100%,@cem-porcento));
@@ -14,9 +14,9 @@
  /* IE10+ */
 	background-image: radial-gradient(ellipse at center,  @um-porcento 1%,@cem-porcento 100%);
  /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' @um-porcento', endColorstr='@cem-porcento',GradientType=1 );
- /* IE6-9 fallback on horizontal gradient */
-	color: #fff;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=darken(@um-porcento,3), endColorstr=@cem-porcento,GradientType=1 );
+ /* IE6-9 fallback on horizontal gradient */	
+    color: #fff;
 }
 .rounded-corners (@radius: 5px) {
   -webkit-border-radius: @radius;
