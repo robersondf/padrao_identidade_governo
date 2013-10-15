@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
 <div>
 	<?php foreach ($lista_chamadas as $lista): ?>
 		<?php 
-			//Defini link do artigo			
+			//Define link do artigo			
 			$link = JRoute::_(ContentHelperRoute::getArticleRoute($lista->id, $lista->catid));			
 		?>
 	
