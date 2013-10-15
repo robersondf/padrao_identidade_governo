@@ -17,9 +17,6 @@ $chamadas = new ModChamadasHelper;
 //Executa a função getChamadas
 $lista_chamadas = $chamadas->getChamadas($params);
 
-//Seta o layout de acordo com o modelo
-$modelo = $params->get('modelo');
-
 if(!empty($lista_chamadas)){
-	require JModuleHelper::getLayoutPath('mod_chamadas', $params->get('layout', $modelo));
+	require JModuleHelper::getLayoutPath('mod_chamadas', $params->get('layout', 'default'));
 }

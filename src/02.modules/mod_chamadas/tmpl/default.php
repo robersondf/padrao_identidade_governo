@@ -18,22 +18,24 @@ defined('_JEXEC') or die;
 			$link = JRoute::_(ContentHelperRoute::getArticleRoute($lista->id, $lista->catid));			
 		?>
 	
-	
+		
 		<?php if ($params->get('exibir_imagem')): ?>
-			<div>
-				<?php
-					 $imagem = json_decode($lista->images);
-				?>
-				<a href="<?php echo $link ?>">
-					<img src="<?php echo $imagem->image_intro ?>" />
-				</a>	
-			</div>
+			<?php $imagem = json_decode($lista->images); ?>
+			<?php if ($imagem->image_intro): ?>
+				<div>
+					<a href="<?php echo $link ?>">
+						<img src="<?php echo $imagem->image_intro ?>" />
+					</a>	
+				</div>
+			<?php endif; ?>	
 		<?php endif; ?>
 
 		<?php if ($params->get('exibir_title')): ?>
 			<div>
-				<a href="<?php echo $link ?>">
-					<?php echo $lista->title ?>
+				<a href="<?php echo $link ?>" <?php if ($params->get('header_class')): echo 'class="'.$params->get('header_class').'"'; endif; ?>>
+					<<?php echo $params->get('header_tag')?> <?php if ($params->get('header_class')): echo 'class="'.$params->get('header_class').'"'; endif; ?>>
+						<?php echo $lista->title ?>
+					</<?php echo $params->get('header_tag')?>>
 				</a>	
 			</div>
 		<?php endif; ?>
